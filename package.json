@@ -1,0 +1,35 @@
+{
+  "name": "stepci-examples",
+  "version": "0.0.1",
+  "description": "Repo for showing some Step CI REST API test examples",
+  "main": "index.js",
+  "scripts": {
+    "test": ". ./.example.env && echo BASE_URL=\"$BASE_URL\" && stepci run workflow.yml --env baseURL=$BASE_URL"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matmar10/stepci-examples.git"
+  },
+  "keywords": [
+    "Step",
+    "CI",
+    "REST",
+    "API",
+    "test",
+    "jest"
+  ],
+  "author": "Matthew J. Martin <matthew.mar10@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/matmar10/stepci-examples/issues"
+  },
+  "homepage": "https://github.com/matmar10/stepci-examples#readme",
+  "dependencies": {
+    "@stepci/runner": "^2.0.3",
+    "stepci": "^2.8.0",
+    "ts-jest": "^29.1.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.12"
+  }
+}
