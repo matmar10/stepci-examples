@@ -1,0 +1,27 @@
+version: "1.1"
+name: Status Check
+
+config:
+  http:
+    baseURL: https://httpbin.org
+
+tests:
+  example:
+    steps:
+      - name: POST request
+        http:
+          url: /post
+          method: POST
+          headers:
+            Accept: application/json
+            Content-Type: application/json
+          json:
+            firstName: Matthew
+            lastName: Martin
+            email: matthew@company.com
+          check:
+            status: 200
+            jsonpath:
+              $.json.firstName: Matthew
+              $.json.lastName: Martin
+              $.json.email: matthew@company.com

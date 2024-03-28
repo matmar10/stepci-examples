@@ -4,7 +4,9 @@
   "description": "Repo for showing some Step CI REST API test examples",
   "main": "index.js",
   "scripts": {
-    "test": ". ./.example.env && echo BASE_URL=\"$BASE_URL\" && stepci run workflow.yml --env baseURL=$BASE_URL"
+    "test": "jest",
+    "test:stepci:workflow-1": ". ./.example.env && echo BASE_URL=\"$BASE_URL\" && stepci run workflow-1.yml --env baseURL=$BASE_URL",
+    "test:stepci:workflow-2": "stepci run workflow-2.yml"
   },
   "repository": {
     "type": "git",
